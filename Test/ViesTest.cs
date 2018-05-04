@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ViesClient;
 using ViesClient.Requests;
@@ -13,7 +12,7 @@ namespace UnitTests
         [TestMethod]
         public async Task CheckVatNumberTest()
         {
-            ViesRequest request = new ViesRequest() { CountryCode = "CZ", VatNumber = "24271098" };
+            ViesRequest request = new ViesRequest() { CountryCode = "CZ", VatNumber = "add-8-digit-number-here" };
             var result = await ViesClientImpl.CheckVatNumber(request);
             Assert.IsTrue(result != null && result is ViesSelector);
         }
